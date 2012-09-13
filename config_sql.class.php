@@ -20,7 +20,7 @@ define( "SQL_RETURN_OBJECT", 4 );
 define( "SQL_AND", TRUE );
 define( "SQL_OR", FALSE );
 
-require_once( "config_sql_parent.php" );
+require_once( "config.parent.php" );
 
 class Config_SQL extends Config
 {
