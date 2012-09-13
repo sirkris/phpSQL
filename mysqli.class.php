@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * phpSQL : php_mysqli
+ * 
+ * This is the recommended class if you're connecting to a MySQL database server.
+ */
+
 require_once( "config_sql.class.php" );
 
 class SQL extends Config_SQL
