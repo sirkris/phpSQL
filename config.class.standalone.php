@@ -56,6 +56,18 @@ class Config
 	public function setup()
 	{
 		$this->setup_paths();
+		$this->setup_db();
+	}
+	
+	/* Instantiate the SQL class.  --Kris */
+	public function setup_db()
+	{
+		/* In order to keep the db type segregated to the SQL config, some minor stack redundancy is required.  --Kris */
+		require_once( "config_sql.class.php" );
+		
+		$config_sql = new Config_SQL();
+		
+		$this->sql = $config_sql->load_db();
 	}
 	
 	/* Prepare and sanitize the paths.  --Kris */

@@ -119,13 +119,11 @@ class Config_SQL extends Config
 	{
 		require_once( $this->paths["sql_class"]["path"] );
 		
-		$this->sql = new sql( array( "config" => $this ) );
+		return ( new sql() );
 	}
 	
 	private function setup_ext()
 	{
 		require( "config_sql_secure.php" );
-		
-		$this->load_db();
 	}
 }
